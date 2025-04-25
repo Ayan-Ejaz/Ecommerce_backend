@@ -1,0 +1,4 @@
+express
+Sequelize
+dotenv
+bcryptjs
