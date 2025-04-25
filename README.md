@@ -3,7 +3,9 @@ This is a scalable and modular e-commerce backend system built using Node.js, Ex
 
 **Features**
 Layered Architecture: Clean separation between controllers, services, and data layers for maintainability and scalability.
+
 Role-Based Authorization: Admin and user roles with restricted access controls.
+
 API Gateway: Centralized routing of requests to services like /product, /order, and /payment.
 
 **Redis Integration:**
@@ -14,13 +16,6 @@ Twilio SMS Notifications: Real-time SMS notifications are sent on key events (e.
 MySQL with Sequelize: SQL database support with Sequelize models and migrations.
 Error Handling & Validations: Centralized error handlers and input validation to ensure robust API behavior.
 
-Tech Stack
-Node.js
-Express.js
-MySQL + Sequelize ORM
-Redis
-Stripe API
-Twilio API
 
 
 
