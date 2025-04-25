@@ -21,7 +21,7 @@ const AddProducttoCartController = async (request, response) => {
   } catch (error) {
     response.status(500).json({
       error: "An error occured",
-      details: error.message(),
+      details: error.message,
     });
   }
 };
@@ -41,7 +41,7 @@ const DeleteProductFromCartController = async (request, response) => {
   } catch (error) {
     response.status(500).json({
       error: "An error occured",
-      details: error.message(),
+      details: error.message,
     });
   }
 };
