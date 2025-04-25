@@ -5,8 +5,8 @@ const {
   listProducts,
 } = require("../Services/ProductService");
 
-const addProductController = async (req, res) => {
-  const { name, price, description } = req.body;
+const addProductController = async (request, response) => {
+  const { name, price, description } = request.body;
 
   try {
     const newProduct = await addProduct(name, price, description);
@@ -18,39 +18,39 @@ const addProductController = async (req, res) => {
   }
 };
 
-const updateProductController = async (req, res) => {
-  const { id } = req.params;
-  const { name, price, description } = req.body;
+const updateProductController = async (request, response) => {
+  const { id } = response.params;
+  const { name, price, description } = request.body;
 
   try {
     const updatedProduct = await updateProduct(id, name, price, description);
-    return res
+    return response
       .status(200)
       .json({ success: "Product updated", product: updatedProduct });
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return response.status(400).json({ error: error.message });
   }
 };
 
-const deleteProductController = async (req, res) => {
-  const { keyword } = req.body;
+const deleteProductController = async (request, response) => {
+  const { keyword } = request.body;
 
   try {
     const deletedProduct = await deleteProduct(keyword);
-    return res
+    return response
       .status(200)
       .json({ success: "Product deleted", product: deletedProduct });
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return response.status(400).json({ error: error.message });
   }
 };
 
-const listProductController = async (req, res) => {
+const listProductController = async (request, response) => {
   try {
     const products = await listProducts();
-    return res.status(200).json({ products });
+    return response.status(200).json({ products });
   } catch (error) {
-    return res.status(500).json({ error: "Unable to fetch products" });
+    return response.status(500).json({ error: "Unable to fetch products" });
   }
 };
 
