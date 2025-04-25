@@ -10,10 +10,15 @@ API Gateway: Centralized routing of requests to services like /product, /order, 
 
 **Redis Integration:**
 Cart Management: User cart state is maintained in Redis for quick access.
+
 Caching: Frequently added-to-cart products are cached to reduce database lookups.
+
 Stripe Payment Gateway: Secure and real-world payment handling using Stripe’s paymentIntent API.
-Twilio SMS Notifications: Real-time SMS notifications are sent on key events (e.g., order confirmation).
+
+Twilio SMS Notifications: Real-time SMS notifications on delivery
+
 MySQL with Sequelize: SQL database support with Sequelize models and migrations.
+
 Error Handling & Validations: Centralized error handlers and input validation to ensure robust API behavior.
 
 
